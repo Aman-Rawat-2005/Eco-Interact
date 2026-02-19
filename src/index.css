@@ -1,0 +1,608 @@
+@import "tailwindcss";
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CSS CUSTOM PROPERTIES
+═══════════════════════════════════════════════════════════════════════ */
+:root {
+  --bg-color: #ffffff;
+  --bg-secondary: #f8f9fa;
+  --card-bg: #f8f9fa;
+  --header-bg: rgba(255, 255, 255, 0.85);
+  --text-color: #111827;
+  --text-secondary: #6b7280;
+  --text-muted: #9ca3af;
+  --primary-color: #22c55e;
+  --primary-hover: #16a34a;
+  --border-color: rgba(0, 0, 0, 0.08);
+  --shadow-color: rgba(0, 0, 0, 0.06);
+  --white: #ffffff;
+  --black: #000000;
+  --green: #22c55e;
+  --green-light: #4ade80;
+  --green-dark: #16a34a;
+
+  /* Scrollbar colors */
+  --scrollbar-track: #f1f5f9;
+  --scrollbar-thumb: #22c55e;
+  --scrollbar-thumb-hover: #16a34a;
+}
+
+/* ── DARK MODE: Complete absolute black ──────────────────────────────── */
+.dark {
+  --bg-color: #000000;          /* ✅ Complete black */
+  --bg-secondary: #0a0a0a;      /* ✅ Near-complete black */
+  --card-bg: #0d0d0d;           /* ✅ Card background */
+  --header-bg: rgba(0, 0, 0, 0.92);
+  --text-color: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --text-muted: #6b7280;
+  --primary-color: #22c55e;
+  --primary-hover: #4ade80;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-color: rgba(0, 0, 0, 1);
+  --white: #000000;
+  --black: #f3f4f6;
+  --green: #22c55e;
+  --green-light: #4ade80;
+  --green-dark: #16a34a;
+
+  /* Dark scrollbar */
+  --scrollbar-track: #0a0a0a;
+  --scrollbar-thumb: #22c55e;
+  --scrollbar-thumb-hover: #16a34a;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   BASE STYLES
+═══════════════════════════════════════════════════════════════════════ */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+* {
+  transition-property: background-color, border-color, box-shadow, color;
+  transition-duration: 0.25s;
+  transition-timing-function: ease;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', 'Inter', system-ui, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1.6;
+}
+
+/* ✅ Force black background on dark mode root elements */
+.dark body,
+.dark #root,
+.dark main {
+  background-color: #000000 !important;
+  color: #f3f4f6;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   TAILWIND DARK MODE CLASS OVERRIDES
+═══════════════════════════════════════════════════════════════════════ */
+.dark .dark\:bg-gray-900 {
+  background-color: #000000 !important;
+}
+.dark .dark\:bg-gray-800 {
+  background-color: #0d0d0d !important;
+}
+.dark .dark\:bg-gray-700 {
+  background-color: #111111 !important;
+}
+.dark .dark\:bg-gray-600 {
+  background-color: #1a1a1a !important;
+}
+.dark .dark\:text-white {
+  color: #f3f4f6 !important;
+}
+.dark .dark\:text-gray-300 {
+  color: #d1d5db !important;
+}
+.dark .dark\:text-gray-400 {
+  color: #9ca3af !important;
+}
+.dark .dark\:border-gray-700 {
+  border-color: rgba(255, 255, 255, 0.08) !important;
+}
+.dark .dark\:border-gray-600 {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   CUSTOM UTILITY CLASSES
+═══════════════════════════════════════════════════════════════════════ */
+.bg-custom-bg  { background-color: var(--bg-color) !important; }
+.bg-custom-card { background-color: var(--card-bg) !important; }
+.text-custom-text { color: var(--text-color) !important; }
+.text-custom-secondary { color: var(--text-secondary) !important; }
+.border-custom-border { border-color: var(--border-color) !important; }
+.bg-custom-green { background-color: var(--green) !important; }
+.text-custom-green { color: var(--green) !important; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SCROLLBAR STYLING (with proper dark mode background!)
+═══════════════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+  border-radius: 10px;
+}
+
+/* ✅ Dark mode scrollbar track: absolute black */
+.dark ::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 10px;
+  border: 2px solid var(--scrollbar-track);
+  transition: background 0.2s ease;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  border-color: #000000;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--scrollbar-thumb-hover);
+}
+
+::-webkit-scrollbar-corner {
+  background: var(--scrollbar-track);
+}
+
+.dark ::-webkit-scrollbar-corner {
+  background: #000000;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+.dark * {
+  scrollbar-color: #22c55e #000000;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RANGE INPUT STYLING
+═══════════════════════════════════════════════════════════════════════ */
+input[type=range] {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #22c55e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 10px rgba(34, 197, 94, 0.4);
+  border: 2px solid #ffffff;
+}
+
+.dark input[type=range]::-webkit-slider-thumb {
+  border-color: #000000;
+  box-shadow: 0 2px 12px rgba(34, 197, 94, 0.6);
+}
+
+input[type=range]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  background: #16a34a;
+}
+
+input[type=range]::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #22c55e;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: 2px solid #ffffff;
+}
+
+.dark input[type=range]::-moz-range-thumb {
+  border-color: #000000;
+}
+
+input[type=range]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  background: #16a34a;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   FEATURE LOCK STYLES
+═══════════════════════════════════════════════════════════════════════ */
+.backdrop-blur-xl {
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
+}
+
+.backdrop-blur-2xl {
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(40px);
+}
+
+.brightness-50 {
+  filter: brightness(0.5);
+}
+
+.brightness-30 {
+  filter: brightness(0.3);
+}
+
+.brightness-25 {
+  filter: brightness(0.25);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ANIMATIONS
+═══════════════════════════════════════════════════════════════════════ */
+@keyframes blob {
+  0%   { transform: translate(0, 0) scale(1); }
+  33%  { transform: translate(30px, -50px) scale(1.1); }
+  66%  { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0, 0) scale(1); }
+}
+.animate-blob { animation: blob 7s infinite; }
+.animation-delay-2000 { animation-delay: 2s; }
+.animation-delay-4000 { animation-delay: 4s; }
+
+@keyframes shimmer {
+  0%   { transform: translateX(-100%) skewX(-12deg); }
+  100% { transform: translateX(200%) skewX(-12deg); }
+}
+.animate-shimmer { animation: shimmer 2s infinite; }
+
+@keyframes bounce-x {
+  0%, 100% { transform: translateX(0); }
+  50%       { transform: translateX(5px); }
+}
+.animate-bounce-x { animation: bounce-x 1s infinite; }
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25%       { transform: translateX(-5px); }
+  75%       { transform: translateX(5px); }
+}
+.animate-shake { animation: shake 0.3s ease-in-out; }
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in { animation: fade-in 0.3s ease-out; }
+
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  25%       { transform: translateY(-8px) rotate(2deg); }
+  75%       { transform: translateY(8px) rotate(-2deg); }
+}
+.float-animation      { animation: float 6s ease-in-out infinite; }
+.float-animation-slow { animation: float 8s ease-in-out infinite; }
+.float-animation-fast { animation: float 4s ease-in-out infinite; }
+
+@keyframes pulse-energy {
+  0%   { opacity: 0.4; transform: scale(1); filter: brightness(1); }
+  50%  { opacity: 0.8; transform: scale(1.05); filter: brightness(1.2); }
+  100% { opacity: 0.4; transform: scale(1); filter: brightness(1); }
+}
+.energy-pulse      { animation: pulse-energy 3s ease-in-out infinite; }
+.energy-pulse-fast { animation: pulse-energy 2s ease-in-out infinite; }
+.energy-pulse-slow { animation: pulse-energy 4s ease-in-out infinite; }
+
+@keyframes flow-energy {
+  0%   { stroke-dashoffset: 24; opacity: 0.3; }
+  50%  { opacity: 1; }
+  100% { stroke-dashoffset: -24; opacity: 0.3; }
+}
+.flow-line { stroke-dasharray: 8 8; animation: flow-energy 20s linear infinite; }
+
+@keyframes gradient-shift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.gradient-bg {
+  background: linear-gradient(-45deg, #22c55e, #16a34a, #15803d, #166534);
+  background-size: 400% 400%;
+  animation: gradient-shift 15s ease infinite;
+}
+
+@keyframes glow-pulse {
+  0%   { box-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+  50%  { box-shadow: 0 0 20px rgba(34, 197, 94, 0.6); }
+  100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.2); }
+}
+.glow-effect { animation: glow-pulse 3s ease-in-out infinite; }
+
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+.rotate-slow      { animation: rotate-slow 20s linear infinite; }
+.animate-spin-slow { animation: rotate-slow 3s linear infinite; }
+
+@keyframes slide-in { from { opacity: 0; transform: translateX(-20px); } to { opacity: 1; transform: translateX(0); } }
+@keyframes slide-up { from { opacity: 0; transform: translateY(20px);  } to { opacity: 1; transform: translateY(0); } }
+@keyframes scale-in { from { opacity: 0; transform: scale(0.9); }        to { opacity: 1; transform: scale(1); } }
+
+.slide-in { animation: slide-in 0.5s ease-out forwards; }
+.slide-up { animation: slide-up 0.5s ease-out forwards; }
+.scale-in { animation: scale-in 0.3s ease-out forwards; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   GLASS CARD
+═══════════════════════════════════════════════════════════════════════ */
+.glass-card {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  transition: all 0.3s ease;
+}
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(34, 197, 94, 0.45);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.2);
+}
+/* ✅ Dark mode glass: pure black bg */
+.dark .glass-card {
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+.dark .glass-card:hover {
+  background: rgba(0, 0, 0, 0.75);
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   TROPHIC GRADIENTS
+═══════════════════════════════════════════════════════════════════════ */
+.trophic-producer  { background: linear-gradient(135deg, #22c55e, #4ade80); }
+.trophic-primary   { background: linear-gradient(135deg, #eab308, #facc15); }
+.trophic-secondary { background: linear-gradient(135deg, #f97316, #fb923c); }
+.trophic-tertiary  { background: linear-gradient(135deg, #ef4444, #f87171); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ECOSYSTEM CARDS
+═══════════════════════════════════════════════════════════════════════ */
+.ecosystem-card { transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); }
+.ecosystem-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.3);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   STATS CARD HOVER
+═══════════════════════════════════════════════════════════════════════ */
+.stat-card {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.stat-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%;
+  width: 100%; height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.15), transparent);
+  transition: left 0.5s ease;
+}
+.stat-card:hover::before { left: 100%; }
+
+.dark .stat-card { background: rgba(13, 13, 13, 0.9); }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PYRAMID STYLES
+═══════════════════════════════════════════════════════════════════════ */
+.pyramid-segment {
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.15));
+}
+.pyramid-segment:hover {
+  filter: drop-shadow(0 10px 15px rgba(0, 0, 0, 0.25));
+  transform: scale(1.02);
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   ENERGY FLOW LINES
+═══════════════════════════════════════════════════════════════════════ */
+.energy-path { stroke-dasharray: 5; }
+@keyframes flow { to { stroke-dashoffset: -100; } }
+.energy-path { animation: flow 30s linear infinite; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   LOADING SPINNER
+═══════════════════════════════════════════════════════════════════════ */
+.spinner {
+  border: 3px solid rgba(34, 197, 94, 0.25);
+  border-top-color: #22c55e;
+  border-radius: 50%;
+  width: 40px; height: 40px;
+  animation: rotate-slow 1s linear infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   TOOLTIP
+═══════════════════════════════════════════════════════════════════════ */
+.tooltip { position: relative; }
+.tooltip:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 100%; left: 50%;
+  transform: translateX(-50%);
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  border-radius: 6px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 50;
+  margin-bottom: 8px;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   SCROLL LOCK
+═══════════════════════════════════════════════════════════════════════ */
+.body-no-scroll { overflow: hidden; }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   RESPONSIVE
+═══════════════════════════════════════════════════════════════════════ */
+@media (max-width: 768px) {
+  .glass-card { backdrop-filter: blur(5px); }
+  .ecosystem-card:hover { transform: translateY(-4px) scale(1.01); }
+  input[type=range]::-webkit-slider-thumb { width: 24px; height: 24px; }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   PRINT
+═══════════════════════════════════════════════════════════════════════ */
+@media print {
+  .glass-card {
+    background: white !important;
+    border: 1px solid #ddd !important;
+    box-shadow: none !important;
+  }
+  .no-print { display: none !important; }
+}
+/* Add these at the end of your index.css file */
+
+/* ═══════════════════════════════════════════════════════
+   RESPONSIVE UTILITIES FOR FEATURE LOCK
+═══════════════════════════════════════════════════════ */
+
+/* Extra small devices (phones, 640px and down) */
+@media (max-width: 640px) {
+  .xs\:block {
+    display: block;
+  }
+  .xs\:hidden {
+    display: none;
+  }
+}
+
+/* Ensure FeatureLock cards don't overflow */
+.feature-lock-container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Prevent zoom out issues */
+* {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
+
+/* Ensure proper box sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* ═══════════════════════════════════════════════════════
+   VISUALIZATION COMPONENTS - DARK MODE FIX
+═══════════════════════════════════════════════════════ */
+
+/* Force white text for all text elements in visualizations during dark mode */
+.dark .visualization-container,
+.dark [class*="visualization"],
+.dark [class*="Visualization"],
+.dark .viz-card,
+.dark .chart-container,
+.dark .graph-container,
+.dark .network-container,
+.dark .biome-card,
+.dark .food-web-container,
+.dark .pyramid-container,
+.dark .cycle-container {
+  color: #ffffff !important;
+}
+
+/* Ensure all text elements inside visualizations are white */
+.dark .visualization-container p,
+.dark .visualization-container h1,
+.dark .visualization-container h2,
+.dark .visualization-container h3,
+.dark .visualization-container h4,
+.dark .visualization-container h5,
+.dark .visualization-container h6,
+.dark .visualization-container span,
+.dark .visualization-container div:not([class*="bg-"]):not([class*="background"]),
+.dark [class*="visualization"] p,
+.dark [class*="visualization"] h1,
+.dark [class*="visualization"] h2,
+.dark [class*="visualization"] h3,
+.dark [class*="visualization"] h4,
+.dark [class*="visualization"] h5,
+.dark [class*="visualization"] h6,
+.dark [class*="visualization"] span,
+.dark .viz-card p,
+.dark .viz-card h1,
+.dark .viz-card h2,
+.dark .viz-card h3,
+.dark .viz-card h4,
+.dark .viz-card h5,
+.dark .viz-card h6,
+.dark .viz-card span,
+.dark .chart-container p,
+.dark .chart-container h1,
+.dark .chart-container h2,
+.dark .chart-container h3,
+.dark .chart-container h4,
+.dark .chart-container h5,
+.dark .chart-container h6,
+.dark .chart-container span {
+  color: #ffffff !important;
+}
+
+/* Ensure labels and axis text in charts are white */
+.dark .recharts-text,
+.dark .recharts-cartesian-axis-tick-value,
+.dark .recharts-label,
+.dark .recharts-legend-item-text,
+.dark .chart-label,
+.dark .axis-label {
+  fill: #ffffff !important;
+  color: #ffffff !important;
+}
+
+/* Fix for any tooltips or popups in visualizations */
+.dark .viz-tooltip,
+.dark .chart-tooltip,
+.dark .recharts-tooltip-wrapper,
+.dark .recharts-default-tooltip {
+  color: #ffffff !important;
+  background-color: #1a1a1a !important;
+  border-color: #333333 !important;
+}

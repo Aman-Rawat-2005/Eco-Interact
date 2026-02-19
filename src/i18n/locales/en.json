@@ -1,0 +1,439 @@
+{
+  "home": {
+    "hero": {
+      "badge": "Interactive Ecology Learning",
+      "title": "Ecosystems",
+      "subtitle": "Energy Flow & Succession",
+      "description": "An academic model simplifying complex ecological processes through interactive visualization."
+    },
+    "buttons": {
+      "beginLearning": "Begin Learning",
+      "exploreVisualizations": "Explore Visualizations",
+      "startLearning": "Start Learning Now",
+      "viewAllModels": "View All Models"
+    },
+    "introduction": {
+      "title": "A New Way to Understand Ecology",
+      "description": "Traditional learning can make the vibrant processes of energy flow and ecological succession seem abstract. This project bridges that gap, transforming fundamental ecological theories into clear, engaging, and interactive learning experiences."
+    },
+    "concepts": {
+      "title": "Core Objectives",
+      "subtitle": "Explore the fundamental concepts that drive ecosystem dynamics",
+      "energyFlow": {
+        "title": "Energy Flow",
+        "description": "Study the concept of energy flow through food chains and food webs."
+      },
+      "ecologicalPyramids": {
+        "title": "Ecological Pyramids",
+        "description": "Visualize pyramids of number, biomass, and energy."
+      },
+      "primarySuccession": {
+        "title": "Primary Succession",
+        "description": "See how life begins on barren, lifeless land."
+      },
+      "secondarySuccession": {
+        "title": "Secondary Succession",
+        "description": "Witness how ecosystems recover from disturbances."
+      },
+      "biodiversity": {
+        "title": "Biodiversity",
+        "description": "Understand the importance of variety in an ecosystem."
+      },
+      "decomposers": {
+        "title": "Decomposers",
+        "description": "Learn the critical role of nutrient recycling."
+      }
+    },
+    "showcase": {
+      "badge": "Interactive Timeline",
+      "title": "Witness Ecological Succession Unfold",
+      "description": "Go beyond static diagrams. Slide through time to see a barren landscape evolve into a stable, climax community right before your eyes.",
+      "link": "Explore the Model"
+    },
+    "rationale": {
+      "title": "Rationale & Contribution",
+      "paragraph1": "Understanding ecosystems is crucial for appreciating our planet's health and making informed environmental decisions.",
+      "paragraph2": "This project serves as a valuable educational resource, providing a clear, structured explanation of ecological principles to encourage environmental awareness and support academic learning.",
+      "tags": {
+        "interactive": "Interactive Learning",
+        "academic": "Academic Resource",
+        "environmental": "Environmental Awareness"
+      },
+      "visual": {
+        "title": "Ecosystem Dynamics",
+        "description": "Visualizing complex ecological relationships"
+      }
+    },
+    "quote": {
+      "text": "Harmony with land is like harmony with a friend; you cannot cherish his right hand and chop off his left.",
+      "author": "Aldo Leopold"
+    },
+    "cta": {
+      "title": "Ready to Explore?",
+      "description": "Dive deep into ecological concepts with our interactive models and visualizations."
+    }
+  },
+  "settings": {
+    "title": "Settings",
+    "subtitle": "Customize your EcoInteract experience. Manage your account, preferences, and more.",
+    "tabs": {
+      "general": "General",
+      "profile": "Profile",
+      "notifications": "Notifications",
+      "privacy": "Privacy",
+      "appearance": "Appearance",
+      "language": "Language",
+      "premium": "Premium",
+      "account": "Account"
+    },
+    "buttons": {
+      "save": "Save Changes",
+      "updateProfile": "Update Profile",
+      "savePreferences": "Save Preferences",
+      "savePrivacy": "Save Privacy Settings",
+      "saveLanguage": "Save Language",
+      "changePassword": "Change Password",
+      "cancel": "Cancel",
+      "updatePassword": "Update Password",
+      "logout": "Logout",
+      "export": "Export",
+      "delete": "Delete Account"
+    },
+    "messages": {
+      "profileSaved": "Profile settings saved successfully!",
+      "notificationsSaved": "Notification preferences updated!",
+      "privacySaved": "Privacy settings saved!",
+      "languageSaved": "Language preference saved!",
+      "passwordMismatch": "New passwords do not match!",
+      "passwordTooShort": "Password must be at least 6 characters long",
+      "passwordChanged": "Password changed successfully!",
+      "deleteDemo": "Account deletion is not available in demo mode",
+      "logoutSuccess": "Logged out successfully!",
+      "exportStarted": "Data export started. You will receive an email shortly."
+    },
+    "general": {
+      "title": "General Settings",
+      "language": "Language",
+      "languageDesc": "Choose your preferred language for the interface",
+      "timezone": "Time Zone",
+      "timezoneDesc": "Set your local time zone for accurate tracking",
+      "dateFormat": "Date Format",
+      "dateFormatDesc": "Choose how dates are displayed",
+      "timezones": {
+        "ist": "India (IST) UTC+5:30",
+        "est": "United States (EST) UTC-5",
+        "pst": "United States (PST) UTC-8",
+        "gmt": "United Kingdom (GMT) UTC+0",
+        "aest": "Australia (AEST) UTC+10"
+      }
+    },
+    "profile": {
+      "title": "Profile Settings",
+      "defaultBio": "Ecology enthusiast and lifelong learner",
+      "displayName": "Display Name",
+      "email": "Email Address",
+      "emailReadOnly": "Email cannot be changed",
+      "bio": "Bio",
+      "location": "Location",
+      "website": "Website",
+      "twitter": "Twitter"
+    },
+    "notifications": {
+      "title": "Notification Preferences",
+      "email": "Email Notifications",
+      "emailDesc": "Receive updates via email",
+      "push": "Push Notifications",
+      "pushDesc": "Browser push notifications",
+      "quizReminders": "Quiz Reminders",
+      "quizRemindersDesc": "Get reminded to take quizzes",
+      "achievements": "Achievement Alerts",
+      "achievementsDesc": "Notifications when you earn achievements",
+      "newsletter": "Newsletter",
+      "newsletterDesc": "Weekly ecology newsletter",
+      "marketing": "Marketing Emails",
+      "marketingDesc": "Promotional offers and updates",
+      "sound": "Sound Effects",
+      "soundDesc": "Play sounds for notifications",
+      "vibration": "Vibration",
+      "vibrationDesc": "Vibrate on notifications (mobile)"
+    },
+    "privacy": {
+      "title": "Privacy & Security",
+      "profileVisibility": "Profile Visibility",
+      "visibility": {
+        "public": "Public - Everyone can see",
+        "friends": "Friends Only",
+        "private": "Private - Only me"
+      },
+      "showActivity": "Show Activity Status",
+      "showActivityDesc": "Let others see when you are online",
+      "showAchievements": "Show Achievements",
+      "showAchievementsDesc": "Display your achievements on your profile",
+      "showEmail": "Show Email",
+      "showEmailDesc": "Display your email on your profile",
+      "twoFactor": "Two-Factor Authentication",
+      "twoFactorDesc": "Add an extra layer of security",
+      "loginAlerts": "Login Alerts",
+      "loginAlertsDesc": "Get notified of new logins",
+      "password": "Password",
+      "passwordDesc": "Change your account password"
+    },
+    "appearance": {
+      "title": "Appearance",
+      "darkMode": "Dark Mode",
+      "darkModeDesc": "Switch between light and dark themes",
+      "switchToLight": "Switch to Light",
+      "switchToDark": "Switch to Dark",
+      "fontSize": {
+        "title": "Font Size",
+        "small": "Small",
+        "medium": "Medium",
+        "large": "Large",
+        "xlarge": "Extra Large"
+      },
+      "reduceAnimations": "Reduce Animations",
+      "reduceAnimationsDesc": "Minimize motion effects",
+      "compactMode": "Compact Mode",
+      "compactModeDesc": "Show more content with less spacing",
+      "autoPlay": "Auto-play Media",
+      "autoPlayDesc": "Automatically play videos and animations",
+      "downloadWifi": "Download over Wi-Fi only",
+      "downloadWifiDesc": "Only download content on Wi-Fi",
+      "offlineMode": "Offline Mode",
+      "offlineModeDesc": "Use the app without internet connection"
+    },
+    "language": {
+      "title": "Language Settings",
+      "description": "Choose your preferred language for the interface. All 22 official languages of India are supported.",
+      "changed": "Language changed to {{language}}"
+    },
+    "premium": {
+      "title": "Premium Membership",
+      "active": "Premium Active",
+      "activeDesc": "You have access to all premium features",
+      "plan": "Plan",
+      "annualPlan": "Annual Premium",
+      "nextBilling": "Next Billing",
+      "autoRenew": "Auto-renew",
+      "manageSubscription": "Manage Subscription",
+      "viewBenefits": "View Benefits",
+      "goPremium": "Go Premium",
+      "benefits": "Unlock all features including unlimited quizzes, detailed analytics, achievements, and more!",
+      "upgrade": "Upgrade to Premium",
+      "features": {
+        "unlimitedQuizzes": "Unlimited Quizzes",
+        "detailedAnalytics": "Detailed Analytics",
+        "achievements": "Achievement Badges",
+        "prioritySupport": "Priority Support",
+        "noAds": "No Ads",
+        "exportData": "Export Data"
+      }
+    },
+    "account": {
+      "title": "Account Management",
+      "dangerZone": "Danger Zone",
+      "exportData": "Export Data",
+      "exportDataDesc": "Download all your quiz data and progress",
+      "deleteAccount": "Delete Account",
+      "deleteAccountDesc": "Permanently delete your account and all data",
+      "activeSessions": "Active Sessions",
+      "currentDevice": "Current Device",
+      "deviceInfo": "Chrome on Windows · Now",
+      "active": "Active",
+      "signOutOthers": "Sign out all other devices"
+    },
+    "password": {
+      "title": "Change Password",
+      "current": "Current Password",
+      "new": "New Password",
+      "confirm": "Confirm New Password"
+    },
+    "delete": {
+      "title": "Delete Account?",
+      "confirmation": "This action cannot be undone. All your data, including quiz history and achievements, will be permanently deleted."
+    }
+  },
+  "search": {
+    "placeholder": "Search anything…",
+    "label": "Global search",
+    "noResults": "No results for \"{{query}}\"",
+    "tryDifferent": "Try different keywords",
+    "resultsCount": "{{count}} result for \"{{query}}\"",
+    "navigate": "↑↓ Navigate",
+    "open": "↵ Open",
+    "close": "Esc Close",
+    "popularTopics": "Popular topics",
+    
+    "categories": {
+      "page": "Page",
+      "energyFlow": "Energy Flow",
+      "succession": "Succession",
+      "visualizations": "Visualizations",
+      "quiz": "Quiz",
+      "about": "About",
+      "account": "Account",
+      "concept": "Concept"
+    },
+    
+    "home": {
+      "title": "Home",
+      "description": "Welcome to EcoInteract — interactive ecology learning platform."
+    },
+    
+    "energy": {
+      "intro": {
+        "title": "Energy Flow — Introduction",
+        "description": "How energy enters ecosystems through sunlight and producers."
+      },
+      "trophic": {
+        "title": "Trophic Levels",
+        "description": "Producers, herbivores, carnivores and apex predators across levels."
+      },
+      "tenPercent": {
+        "title": "10% Energy Rule",
+        "description": "Only 10% of energy transfers to the next trophic level — rest is lost as heat."
+      },
+      "pyramid": {
+        "title": "Ecological Pyramids",
+        "description": "Pyramids of number, biomass, and energy in ecosystems."
+      }
+    },
+    
+    "succession": {
+      "intro": {
+        "title": "Ecological Succession — Overview",
+        "description": "How ecosystems change over time from bare land to climax community."
+      },
+      "primary": {
+        "title": "Primary Succession",
+        "description": "Succession starting from bare rock or newly formed land with no soil."
+      },
+      "secondary": {
+        "title": "Secondary Succession",
+        "description": "Succession after disturbance where soil is still present — faster recovery."
+      },
+      "pioneer": {
+        "title": "Pioneer Species",
+        "description": "First organisms to colonize a new or disturbed habitat."
+      },
+      "climax": {
+        "title": "Climax Community",
+        "description": "The stable, final stage of ecological succession — long-term equilibrium."
+      }
+    },
+    
+    "viz": {
+      "foodweb": {
+        "title": "Food Web Visualization",
+        "description": "Interactive food web — see how species are connected."
+      },
+      "nutrient": {
+        "title": "Nutrient Cycles",
+        "description": "Carbon, nitrogen, and water cycles illustrated interactively."
+      },
+      "biomes": {
+        "title": "Biome Explorer",
+        "description": "Explore different biomes — desert, rainforest, tundra, coral reef and more."
+      },
+      "population": {
+        "title": "Population Dynamics",
+        "description": "Predator-prey relationships and population oscillations visualized."
+      }
+    },
+    
+    "quiz": {
+      "main": {
+        "title": "Ecology Quiz",
+        "description": "Test your knowledge of ecosystems, energy flow, and succession."
+      },
+      "history": {
+        "title": "Quiz History",
+        "description": "View all your past quiz attempts, scores, and performance trends."
+      }
+    },
+    
+    "about": {
+      "overview": {
+        "title": "About EcoInteract",
+        "description": "Project synopsis, objectives, methodology, and team behind EcoInteract."
+      },
+      "developer": {
+        "title": "About the Developer",
+        "description": "Meet Aman Rawat — developer and designer of EcoInteract."
+      },
+      "vision": {
+        "title": "Future Vision",
+        "description": "AI simulations, real-world data, analytics — where EcoInteract is headed."
+      }
+    },
+    
+    "dashboard": {
+      "title": "My Dashboard",
+      "description": "View your learning progress, activity, and quiz statistics."
+    },
+    
+    "profile": {
+      "title": "My Profile",
+      "description": "Manage your account details, avatar, and personal information."
+    },
+    
+    "settings": {
+      "title": "Settings",
+      "description": "Customize your EcoInteract experience — dark mode, notifications, preferences."
+    },
+    
+    "concepts": {
+      "biodiversity": {
+        "title": "Biodiversity",
+        "description": "Understanding species richness, ecosystem diversity and why it matters."
+      },
+      "decomposer": {
+        "title": "Decomposers & Detritivores",
+        "description": "How fungi and bacteria break down dead matter and recycle nutrients."
+      },
+      "keystone": {
+        "title": "Keystone Species",
+        "description": "Species with disproportionately large effects on their ecosystems."
+      },
+      "carrying": {
+        "title": "Carrying Capacity",
+        "description": "The maximum population size an environment can sustainably support."
+      }
+    }
+  },
+  
+  "header": {
+    "tagline": "Interactive Ecology",
+    "greeting": "Hi {{name}} 👋",
+    "completeProfile": "Complete Profile",
+    "logout": "Logout",
+    "locked": "Locked",
+    "darkMode": {
+      "light": "Light Mode",
+      "dark": "Dark Mode"
+    },
+    "nav": {
+      "home": "Home",
+      "visualizations": "Visualizations",
+      "succession": "Succession",
+      "energyFlow": "Energy Flow",
+      "quiz": "Quiz",
+      "about": "About",
+      "profile": "My Account",
+      "dashboard": "My Dashboard",
+      "quizHistory": "Quiz History",
+      "settings": "Settings"
+    },
+    "premium": {
+      "active": "You are a Premium User",
+      "start": "Start Your Premium"
+    },
+    "guest": {
+      "welcome": "Welcome Guest 👋",
+      "message": "Sign in to access all features",
+      "login": "Login to Your Account",
+      "signup": "Create New Account"
+    }
+  }
+}
+  
