@@ -4,7 +4,7 @@ import { useAuth } from "./context/AuthContext";
 
 // 🔐 Auth
 import { AuthProvider } from "./context/AuthContext";
-import ProtectedRoute from "./Components/ProtectedRoute";
+import ProtectedRoute from "./components/ProtectedRoute";
 
 // 🌙 Dark Mode Context
 export const DarkModeContext = createContext();
@@ -19,9 +19,9 @@ export const useDarkMode = () => {
 };
 
 // 🧩 Components
-import ScrollToTop from "./Components/ScrollToTop";
-import Header from "./Components/Header";
-import Footer from "./Components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
 // 📄 Pages
 import HomePage from "./pages/HomePage";
